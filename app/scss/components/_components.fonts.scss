@@ -1,0 +1,38 @@
+/*
+    font face
+ */
+
+@font-face {
+  font-family: "FuturaPT-Book";
+  src: url("../fonts/FuturaPT-Book.woff");
+}
+$fb : "FuturaPT-Book";
+
+@font-face {
+  font-family: "FuturaPT-Demi";
+  src: url("../fonts/FuturaPT-Demi.woff");
+}
+$fd : "FuturaPT-Demi";
+
+@font-face {
+  font-family: "FuturaPT-Medium";
+  src: url("../fonts/FuturaPT-Medium.woff");
+}
+$fm : "FuturaPT-Medium";
+
+$main: #05232f;
+$gradient2: linear-gradient(180deg, #05232f 0%, #031821 100%);
+$darker: #051d27;
+$darker2: #031821;
+$gradient: linear-gradient(180deg, #05222e 0%, rgba(5, 35, 47, 0) 50%, #05232f 100%);
+$pale-green: #37768e;
+$gradient: linear-gradient(180deg, #fa00ff 0%, rgba(5, 35, 47, 0) 100%);
+$white: #fff;
+$pink: #e33267;
+$blue: #3adafd;
+$light-gray: #96bccc;
+
+$shadow1: inset 0px 0px 10px #05211c;
+$shadow2: 0px 0px 5px rgba(80, 9, 84, 0.5);
+
+$blur: blur(5px);

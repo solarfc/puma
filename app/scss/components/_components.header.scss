@@ -1,0 +1,62 @@
+/*
+    header style
+ */
+
+.header {
+  background: url("../img/header/bg.png") no-repeat center/cover;
+  padding: 22px 0 145px;
+
+  .delivery {
+    margin-bottom: 159px;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding-left: 345px;
+    position: relative;
+
+    h1 {
+
+      span {
+
+      }
+    }
+
+    h4 {
+      color: #fff;
+      max-width: 594px;
+      margin-bottom: 62px;
+    }
+
+    .price {
+
+    }
+
+    &-img {
+      position: relative;
+      position: absolute;
+      top: -123px;
+      left: -122px;
+
+      img {
+
+        &.girl {
+
+        }
+
+        &.boot {
+
+        }
+      }
+    }
+
+    .to-order {
+      margin: 17px 0 64px 0;
+    }
+
+    span.button {
+      color: $white;
+      display: block;
+    }
+  }
+}
