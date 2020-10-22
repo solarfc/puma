@@ -1,0 +1,474 @@
+/*
+    catalog style
+ */
+
+.catalog {
+  padding: 124px 0 83px;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 9;
+  }
+
+  &__block {
+    position: relative;
+
+    section {
+      box-sizing: border-box;
+      padding: 34px 93px 40px 24px;
+      background: $white;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 29px;
+
+      @include mq(xl) {
+        padding-right: 55px;
+      }
+
+      h2 {
+        color: $main;
+        margin-bottom: 17px;
+
+        span {
+          display: block;
+          margin-left: 3px;
+        }
+      }
+
+      p.big {
+        color: $pale-green;
+      }
+
+      span.button.sale {
+        position: static;
+      }
+
+      .price {
+        margin: -10px 0 20px 622px;
+
+        @include mq(lg) {
+          margin-left: 458px;
+        }
+
+        span {
+
+          &.new-price {
+            color: $pink;
+          }
+        }
+      }
+
+      ul {
+        max-width: 453px;
+        margin-left: 630px;
+
+        @include mq(lg) {
+          margin-left: 465px;
+        }
+
+        li {
+          margin-bottom: 20px;
+
+          p.big {
+
+            span {
+              display: inline-block;
+              width: 274px;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .catalog__block-img {
+        position: relative;
+        position: absolute;
+        top: 50px;
+        left: 442px;
+
+        @include mq(lg) {
+          width: 400px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          top: 180px;
+          left: 24px;
+        }
+
+        a {
+          margin-bottom: 10px;
+          transition: all 0.5s ease-in-out;
+
+          @include mq(lg) {
+            width: 180px;
+          }
+
+          img {
+            transition: inherit;
+
+            @include mq(lg) {
+              width: 100%;
+            }
+          }
+        }
+
+        figure.clip {
+          height: 100px;
+
+          @include mq(lg) {
+            width: 180px;
+            height: 120px;
+            margin: 0 auto;
+          }
+
+          .video-play {
+            width: 30px;
+            height: 29px;
+          }
+        }
+
+        img.big {
+          position: absolute;
+          pointer-events: none;
+          transition: opacity 0.5s ease-in-out;
+          left: -484px;
+
+          @include mq(lg) {
+            display: none;
+          }
+
+          &.black {
+            top: 77px;
+          }
+
+          &.white {
+            top: 49px;
+          }
+        }
+      }
+
+      .color {
+        display: flex;
+        position: absolute;
+        top: 54px;
+        left: 654px;
+
+        @include mq(lg) {
+          left: 489px;
+        }
+
+        p {
+          margin-top: 49px;
+          margin-right: 20px;
+        }
+
+        figure {
+          display: flex;
+
+          span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: #d3e5ed;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.75s ease-in-out;
+
+            &:after {
+              content: "";
+              display: block;
+              width: 100px;
+              height: 86px;
+              position: absolute;
+              top: 0;
+              left: 5px;
+            }
+
+            &.black {
+
+              &:after {
+                background: url("../img/catalog/black-woman.png") no-repeat center/cover;
+              }
+            }
+
+            &.white {
+
+              &:after {
+                background: url("../img/catalog/white-woman.png") no-repeat center/cover;
+              }
+            }
+
+            &.active {
+              background: $light-gray;
+            }
+
+            &:nth-child(2) {
+              margin-left: 38px;
+            }
+          }
+        }
+      }
+
+      p.small {
+        color: $pink;
+        max-width: 292px;
+        position: absolute;
+        bottom: 36px;
+        left: 24px;
+
+        @include mq(lg) {
+          bottom: 25px;
+        }
+      }
+
+      .rating {
+        width: 80px;
+        height: 80px;
+        background: #f4c857;
+        border-radius: 50%;
+        position: relative;
+        position: absolute;
+        top: -40px;
+        left: -40px;
+
+        @include mq(xl) {
+          left: -20px;
+        }
+
+        @include mq(lg) {
+          left: -5px;
+        }
+
+        &:before, &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &:before {
+          width: 20px;
+          height: 20px;
+          background: url("../img/catalog/star.png") no-repeat center/cover;
+          top: 15px;
+        }
+
+        &:after {
+          content: "4,9/5,0";
+          font-family: $fm, sans-serif;
+          font-size: 16px;
+          line-height: 21px;
+          text-transform: uppercase;
+          color: #554315;
+          bottom: 17px;
+        }
+      }
+    }
+
+    form {
+
+      .form-group {
+
+        @include mq(xl) {
+          width: 270px;
+        }
+
+        @include mq(lg) {
+          width: 230px;
+        }
+
+        &.tel {
+          margin: 0 11px;
+        }
+
+        &.order {
+          margin-left: auto;
+        }
+      }
+
+      .select-box {
+        width: 280px;
+
+        @include mq(xl) {
+          width: 270px;
+        }
+
+        @include mq(lg) {
+          width: 230px;
+        }
+
+        .jq-selectbox {
+          width: 100%;
+
+          &__select {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            padding: 21px 23px 14px;
+            border: none;
+            text-shadow: none;
+            box-shadow: none;
+            background: $white;
+            border-radius: 5px;
+            font-family: $fb, sans-serif;
+            font-size: 18px;
+            line-height: 20px;
+            color: $pale-green;
+
+            &-text {
+              width: 100% !important;
+            }
+
+            &:after {
+              content: "";
+              display: block;
+              width: 16px;
+              height: 9px;
+              background: url("../img/catalog/arrow.png") no-repeat center/cover;
+              position: absolute;
+              top: 28px;
+              right: 16px;
+              pointer-events: none;
+              transition: all 0.25s ease-in-out;
+            }
+          }
+
+          &__dropdown {
+            border-radius: 5px;
+            border: none;
+            box-shadow: none;
+            font-family: $fb, sans-serif;
+            font-size: 18px;
+            line-height: 20px;
+            color: $pale-green;
+
+            overflow: hidden;
+
+            ul {
+              margin: 0 auto;
+
+              li {
+                color: inherit;
+              }
+            }
+          }
+
+          &__trigger {
+            display: none;
+          }
+
+          &.opened {
+
+            .jq-selectbox__select {
+
+              &:after {
+                transform: translateY(-50%) scale(1, -1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .vector {
+      z-index: -1;
+
+      &.left {
+        width: 583px;
+        height: 430px;
+        background: url("../img/catalog/vector-left.png") no-repeat center/cover;
+        top: -55px;
+        left: -152px;
+      }
+    }
+
+    &.woman {
+
+      .vector {
+
+        &.right {
+          width: 656px;
+          height: 660px;
+          background: url("../img/catalog/vector-right.png") no-repeat center/cover;
+          bottom: -405px;
+          right: -348px;
+        }
+      }
+    }
+
+    &.man {
+      margin: 155px auto 58px;
+
+      section {
+
+        .catalog__block-img {
+
+          img.big {
+
+            &.yellow {
+              top: 72px;
+              left: -474px;
+            }
+
+            &.black {
+              top: 77px;
+              left: -483px;
+            }
+          }
+        }
+
+        .color {
+
+          figure {
+
+            span {
+
+              &:after {
+                width: 110px;
+                height: 77px;
+                top: 10px;
+                left: -1px;
+              }
+
+              &.yellow {
+
+                &:after {
+                  background: url("../img/catalog/yellow-man.png") no-repeat center/cover;
+                }
+              }
+
+              &.black {
+
+                &:after {
+                  background: url("../img/catalog/black-man.png") no-repeat center/cover;
+                }
+              }
+            }
+          }
+        }
+
+        .rating {
+
+          &:after {
+            content: "3,8/5,0";
+          }
+        }
+      }
+    }
+  }
+
+  .snow {
+    width: 100%;
+    height: 987px;
+    background: url("../img/catalog/snow.png") no-repeat center/cover;
+    position: absolute;
+    top: 532px;
+    left: 0;
+  }
+}

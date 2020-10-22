@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 viewport-fit=cover">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Puma</title>
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.css">
+        <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -26,6 +30,8 @@
                     </div>
                     <div class="header__content-img">
                         <img src="img/header/girl.png" alt="" class="girl">
+                        <img src="img/header/shoe.png" alt="" class="boot">
+                        <span class="button sale">sale -60%</span>
                     </div>
                     <div class="to-order">
                         <a href="">заказать</a>
@@ -34,14 +40,395 @@
                     <span class="button">скидка на вторую пару <strong>200грн</strong></span>
                 </div>
             </div>
+            <div class="snow"></div>
         </header>
         <!-- header end -->
         <!-- main start -->
+        <main role="main">
+            <!-- advantages start -->
+            <div class="advantages">
+                <div class="container">
+                    <div class="advantages__content">
+                        <h3>уютные зимние ботинки</h3>
+                        <p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae pretium urna vestibulum aliquam lectus eu, blandit. Ultricies mi odio erat hendrerit amet eget amet. Amet, placerat turpis at proin eget. Praesent egestas amet augue libero tincidunt sit libero ridiculus.</p>
+                        <div class="advantages__content-block">
+                            <figure>
+                                <h4>Высококачественная натуральная кожа</h4>
+                                <p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae pretium urna vestibulum aliquam lectus eu, blandit.</p>
+                            </figure>
+                            <figure>
+                                <h4>Быстрая доставка в любую точку</h4>
+                                <p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae pretium urna vestibulum aliquam lectus eu, blandit.</p>
+                            </figure>
+                            <figure>
+                                <h4>Низкие цены и что-то еще</h4>
+                                <p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae pretium urna vestibulum aliquam lectus eu, blandit.</p>
+                            </figure>
+                        </div>
+                        <div class="advantages__content-img">
+                            <img src="img/advantages/img.png" alt="">
+                            <div class="vector"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- advantages end -->
+            <!-- gallery start -->
+            <div class="gallery">
+                <div class="gallery__content">
+                    <a href="img/gallery/1/1.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/1-s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/1/2.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/2-s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/1/3.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/3-s.jpg" alt="">
+                    </a>
+                    <figure class="clip">
+                        <img src="img/gallery/1/video-bg.jpg" alt="" class="video-media js-show-video" data-video="PisI9l29k4E">
+                        <div class="video-play"></div>
+                    </figure>
+                    <a href="img/gallery/1/4.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/4-s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/1/5.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/5-s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/1/6.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/6-s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/1/7.jpg" data-fancybox="gallery">
+                        <img src="img/gallery/1/7-s.jpg" alt="">
+                    </a>
 
+                    <!--                    <div class="gallery__content-block">-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <!-- gallery end -->
+            <!-- spray start -->
+            <div class="spray">
+                <div class="container">
+                    <div class="spray__content">
+                        <h3>Cпрей ECCO</h3>
+                        <p class="small uppercase">При покупке второй пары получите спрей по супер цене всего</p>
+                        <div class="price">
+                            <span class="new-price">299грн</span>
+                            <span class="old-price">454грн</span>
+                        </div>
+                        <p class="big">Универсальный защитный спрей, который помогает сохранить обувь и аксессуары ECCO чистыми, сухими и без пятен.</p>
+                        <p class="big">Подходит для обуви из гладкой кожи, замши, нубука и ткани, прошел тестовые испытания на коже и отделочных материалах ECCO.</p>
+                        <p class="big">Подходит для обуви ECCO с мембраной GORE-TEX.</p>
+                        <p class="big">Объём: 100 мл; цвет нейтральный.</p>
+                    </div>
+                    <form action="">
+                        <div class="form-group name">
+                            <input type="text" id="name_first" class="form-control" name="name_first" placeholder="Имя" required>
+                        </div>
+                        <div class="form-group tel">
+                            <input type="tel" id="phone" class="form-control" name="phone" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group order">
+                            <button type="submit">Заказать</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="snow"></div>
+            </div>
+            <!-- spray end -->
+            <!-- catalog start -->
+            <div class="catalog">
+                <div class="container">
+                    <div class="catalog__block woman">
+                        <section>
+                            <h2>puma x fenty <span>by Rihanna</span></h2>
+                            <span class="button sale">sale -60%</span>
+                            <div class="price">
+                                <span class="new-price">1579грн</span>
+                                <span class="old-price">3990грн</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <p class="big"><span>Сезон: </span>зима</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Вид товара: </span>ботинки</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Пол: </span>женский</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Верх: </span>натуральна кожа</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Материал подкладки: </span>натуральный мех</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Материал внешней подошвы: </span>резина</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Материал внутренней подошвы: </span>пенка ЕВА</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Стиль: </span>comfort, active</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Страна производства: </span>Вьетнам</p>
+                                </li>
+                            </ul>
+                            <div class="catalog__block-img">
+                                <a href="img/catalog/7733/1.jpg" data-fancybox="">
+                                    <img src="img/catalog/7733/1s.jpg" alt="">
+                                </a>
+                                <a href="img/catalog/7733/2.jpg" data-fancybox="">
+                                    <img src="img/catalog/7733/2s.jpg" alt="">
+                                </a>
+                                <a href="img/catalog/7733/3.jpg" data-fancybox="">
+                                    <img src="img/catalog/7733/3s.jpg" alt="">
+                                </a>
+                                <a href="img/catalog/7733/4.jpg" data-fancybox="">
+                                    <img src="img/catalog/7733/4s.jpg" alt="">
+                                </a>
+                                <figure class="clip">
+                                    <img src="img/catalog/7733/video-bg.jpg" alt="" class="video-media js-show-video" data-video="PisI9l29k4E">
+                                    <div class="video-play"></div>
+                                </figure>
+                                <img src="img/catalog/7733/big.png" alt="" class="big black">
+                            </div>
+                            <div class="color">
+                                <p class="big">Выберите цвет:</p>
+                                <figure>
+                                    <span data-model="7733" class="black active"></span>
+                                    <span data-model="7734" class="white"></span>
+                                </figure>
+                            </div>
+                            <p class="small">При покупке второй пары дополнительная скидка 200грн</p>
+                            <div class="rating">
+
+                            </div>
+                        </section>
+                        <form action="">
+                            <div class="form-group name">
+                                <input type="text" id="name_first" class="form-control" name="name_first" placeholder="Имя" required>
+                            </div>
+                            <div class="form-group tel">
+                                <input type="tel" id="phone" class="form-control" name="phone" placeholder="Телефон" required>
+                            </div>
+                            <div class="select-box">
+                                <select class="select-elem">
+                                    <option selected="selected" disabled value="">Выберите размер</option>
+                                    <option value="40">40 26.5 см</option>
+                                    <option value="41">41 27 см</option>
+                                    <option value="42">42 27.5 см</option>
+                                    <option value="43">43 28 см</option>
+                                    <option value="44">44 28.5 см</option>
+                                    <option value="45">45 29 см</option>
+                                </select>
+                            </div>
+                            <div class="form-group order">
+                                <button type="submit">Заказать</button>
+                            </div>
+                        </form>
+                        <div class="vector left"></div>
+                        <div class="vector right"></div>
+                    </div>
+                    <div class="catalog__block man">
+                        <section>
+                            <h2>puma x fenty <span>by Rihanna</span></h2>
+                            <span class="button sale">sale -60%</span>
+                            <div class="price">
+                                <span class="new-price">1579грн</span>
+                                <span class="old-price">3990грн</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <p class="big"><span>Сезон: </span>зима</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Вид товара: </span>ботинки</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Пол: </span>женский</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Верх: </span>натуральна кожа</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Материал подкладки: </span>натуральный мех</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Материал внешней подошвы: </span>резина</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Материал внутренней подошвы: </span>пенка ЕВА</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Стиль: </span>comfort, active</p>
+                                </li>
+                                <li>
+                                    <p class="big"><span>Страна производства: </span>Вьетнам</p>
+                                </li>
+                            </ul>
+                            <div class="catalog__block-img">
+                                <a href="img/catalog/7730/1.jpg" data-fancybox="">
+                                    <img src="img/catalog/7730/1s.jpg" alt="">
+                                </a>
+                                <a href="img/catalog/7730/2.jpg" data-fancybox="">
+                                    <img src="img/catalog/7730/2s.jpg" alt="">
+                                </a>
+                                <a href="img/catalog/7730/3.jpg" data-fancybox="">
+                                    <img src="img/catalog/7730/3s.jpg" alt="">
+                                </a>
+                                <a href="img/catalog/7730/4.jpg" data-fancybox="">
+                                    <img src="img/catalog/7730/4s.jpg" alt="">
+                                </a>
+                                <figure class="clip">
+                                    <img src="img/catalog/7730/video-bg.jpg" alt="" class="video-media js-show-video" data-video="PisI9l29k4E">
+                                    <div class="video-play"></div>
+                                </figure>
+                                <img src="img/catalog/7730/big.png" alt="" class="big yellow">
+                            </div>
+                            <div class="color">
+                                <p class="big">Выберите цвет:</p>
+                                <figure>
+                                    <span data-model="7730" class="yellow active"></span>
+                                    <span data-model="7729" class="black"></span>
+                                </figure>
+                            </div>
+                            <p class="small">При покупке второй пары дополнительная скидка 200грн</p>
+                            <div class="rating"></div>
+                        </section>
+                        <form action="">
+                            <div class="form-group name">
+                                <input type="text" id="name_first" class="form-control" name="name_first" placeholder="Имя" required>
+                            </div>
+                            <div class="form-group tel">
+                                <input type="tel" id="phone" class="form-control" name="phone" placeholder="Телефон" required>
+                            </div>
+                            <div class="select-box">
+                                <select class="select-elem">
+                                    <option selected="selected" disabled value="">Выберите размер</option>
+                                    <option value="40">40 26.5 см</option>
+                                    <option value="41">41 27 см</option>
+                                    <option value="42">42 27.5 см</option>
+                                    <option value="43">43 28 см</option>
+                                    <option value="44">44 28.5 см</option>
+                                    <option value="45">45 29 см</option>
+                                </select>
+                            </div>
+                            <div class="form-group order">
+                                <button type="submit">Заказать</button>
+                            </div>
+                        </form>
+                        <div class="vector left"></div>
+                    </div>
+                    <div class="delivery">
+                        <p class="small">доставка в течении 3 дней</p>
+                        <p class="small">оплата при получении</p>
+                        <p class="small">самые низкие цены</p>
+                    </div>
+                </div>
+                <div class="snow"></div>
+            </div>
+            <!-- catalog end -->
+            <!-- photo start -->
+            <div class="photo">
+                <div class="photo__content">
+                    <a href="img/gallery/2/1.jpg" data-fancybox="photo">
+                        <img src="img/gallery/2/1s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/2/2.jpg" data-fancybox="photo">
+                        <img src="img/gallery/2/2s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/2/3.jpg" data-fancybox="photo">
+                        <img src="img/gallery/2/3s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/2/4.jpg" data-fancybox="photo">
+                        <img src="img/gallery/2/4s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/2/5.jpg" data-fancybox="photo">
+                        <img src="img/gallery/2/5s.jpg" alt="">
+                    </a>
+                    <a href="img/gallery/2/6.jpg" data-fancybox="photo">
+                        <img src="img/gallery/2/6s.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- photo end -->
+        </main>
         <!-- main end -->
         <!-- footer start -->
+        <footer class="footer">
+            <div class="container">
+                <div class="review">
+                    <h3>отзывы покупателей</h3>
+                    <div class="review__content">
+                        <div class="review__content-slider">
+                            <div class="review__content-slider__item">
+                                <figure>
+                                    <p class="big">Текст отзыва номер раз Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small">Александр</p>
+                                </figure>
+                                <figure>
+                                    <p class="big">Текст отзыва номер раз Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small">Александр</p>
+                                </figure>
+                            </div>
+                            <div class="review__content-slider__item">
+                                <figure>
+                                    <p class="big">Текст отзыва номер раз Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small">Александр</p>
+                                </figure>
+                                <figure>
+                                    <p class="big">Текст отзыва номер раз Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small">Александр</p>
+                                </figure>
+                            </div>
+                            <div class="review__content-slider__item">
+                                <figure>
+                                    <p class="big">Текст отзыва номер раз Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small">Александр</p>
+                                </figure>
+                                <figure>
+                                    <p class="big">Текст отзыва номер раз Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small">Александр</p>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="review__content-nav">
+                            <div class="prev-arrow"></div>
+                            <div class="next-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__content">
+                    <h2>puma x fenty <span>by Rihanna</span></h2>
+                    <h4>Зимние ботинки сочетающие в себе стиль и комфорт. Только натуральные материалы.</h4>
+                    <div class="price">
+                        <span class="new-price">1579грн</span>
+                        <span class="old-price">3990грн</span>
+                    </div>
+                    <div class="footer__content-img">
+                        <img src="img/footer/shoe.png" alt="">
+                        <span class="button sale">sale -60%</span>
+                    </div>
+                    <div class="to-order">
+                        <a href="">заказать</a>
+                        <p class="small">акция длитя до <output></output></p>
+                    </div>
+                    <p class="small address">Разработано <a href="http://itcreative.info/">ITcreative</a> <output></output></p>
+                </div>
+            </div>
+            <div class="snow"></div>
+        </footer>
         <!-- footer end -->
         <script src="js/jq.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/video.js"></script>
+        <script src="js/jquery.formstyler.min.js"></script>
+        <script src="js/slick.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

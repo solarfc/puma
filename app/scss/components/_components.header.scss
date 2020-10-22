@@ -3,11 +3,25 @@
  */
 
 .header {
-  background: url("../img/header/bg.png") no-repeat center/cover;
-  padding: 22px 0 145px;
+  background: url("../img/header/bg.png") no-repeat center/cover, $main;
+  padding: 20px 0 147px;
+  position: relative;
+
+  @include mq(md) {
+    padding: 18px 0 67px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 11;
+  }
 
   .delivery {
     margin-bottom: 159px;
+
+    @include mq(md) {
+      margin-bottom: 50px;
+    }
   }
 
   &__content {
@@ -15,7 +29,15 @@
     padding-left: 345px;
     position: relative;
 
+    @include mq(md) {
+      padding-left: 0;
+    }
+
     h1 {
+
+      @include mq(md) {
+        text-align: center;
+      }
 
       span {
 
@@ -26,10 +48,15 @@
       color: #fff;
       max-width: 594px;
       margin-bottom: 62px;
+
+      @include mq(md) {
+        margin: 20px auto 14px;
+        text-align: center;
+      }
     }
 
     .price {
-
+      text-align: center;
     }
 
     &-img {
@@ -38,25 +65,121 @@
       top: -123px;
       left: -122px;
 
+      @include mq(lg) {
+        left: -100px;
+      }
+
+      @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
       img {
 
         &.girl {
+          position: relative;
+          z-index: 9;
 
+          @include mq(md) {
+            margin: 0;
+          }
         }
 
         &.boot {
+          position: absolute;
+          top: -98px;
+          right: -1395px;
 
+          @include mq(xxl) {
+            right: -1130px;
+          }
+
+          @include mq(lg) {
+            display: none;
+          }
+
+          @include mq(md) {
+            display: block;
+            width: 91%;
+            top: 25px;
+            right: -24%;
+          }
+        }
+      }
+
+      span.button.sale {
+        bottom: 157px;
+        right: 11px;
+
+        @include mq(md) {
+          right: 296px;
+        }
+      }
+
+      &:before {
+        /* скрыть на xxl */
+        content: "";
+        display: block;
+        width: 472px;
+        height: 240px;
+        background: url("../img/header/logo.png") no-repeat center/cover;
+        position: absolute;
+        top: 184px;
+        right: -1036px;
+
+        @include mq(xxl) {
+          display: none;
         }
       }
     }
 
     .to-order {
       margin: 17px 0 64px 0;
+
+      @include mq(md) {
+        margin: 19px auto 26px;
+        text-align: center;
+      }
     }
 
-    span.button {
+    >span.button {
       color: $white;
       display: block;
+
+      @include mq(md) {
+        text-align: center;
+      }
     }
+  }
+
+  .snow {
+    width: 100%;
+    height: 987px;
+    background: url("../img/header/snow.png") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+  }
+
+  &:before {
+    height: 126px;
+    background: url("../img/header/wave-top.png") no-repeat center/cover;
+    top: 0;
+  }
+
+  &:after {
+    height: 134px;
+    background: url("../img/header/wave-bottom.png") no-repeat center/cover;
+    bottom: 0;
   }
 }
