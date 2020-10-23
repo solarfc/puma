@@ -11,9 +11,22 @@
     display: flex;
     justify-content: space-between;
 
+    @include mq(md) {
+      flex-wrap: wrap;
+    }
+
     a {
       width: 17%;
       max-width: 320px;
+
+      @include mq(md) {
+        width: 33.33%;
+        max-width: 100%;
+      }
+
+      @include mq(xs) {
+        width: 50%;
+      }
 
       img {
         width: 100%;

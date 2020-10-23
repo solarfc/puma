@@ -6,6 +6,10 @@
   padding: 124px 0 83px;
   position: relative;
 
+  @include mq(md) {
+    padding: 70px 0 37px;
+  }
+
   .container {
     position: relative;
     z-index: 9;
@@ -26,13 +30,45 @@
         padding-right: 55px;
       }
 
+      @include mq(md) {
+        padding-right: 24px;
+        margin-bottom: 20px;
+      }
+
+      @include mq(s) {
+        padding: 30px 10px 16px;
+        text-align: center;
+      }
+
+      @include mq(xs) {
+        text-align: left;
+      }
+
       h2 {
         color: $main;
         margin-bottom: 17px;
 
+        @include mq(s) {
+          margin-bottom: 10px;
+        }
+
+        @include mq(xs) {
+          font-family: $fm, sans-serif;
+          text-align: left;
+        }
+
         span {
           display: block;
           margin-left: 3px;
+
+          @include mq(s) {
+            margin-left: 0;
+          }
+
+          @include mq(xs) {
+            font-family: $fb, sans-serif;
+            margin: -2px 0 0 3px;
+          }
         }
       }
 
@@ -42,6 +78,14 @@
 
       span.button.sale {
         position: static;
+
+        @include mq(s) {
+          margin: 0 auto;
+        }
+
+        @include mq(xs) {
+          margin: 0;
+        }
       }
 
       .price {
@@ -51,10 +95,31 @@
           margin-left: 458px;
         }
 
+        @include mq(md) {
+          margin-left: 210px;
+        }
+
+        @include mq(s) {
+          margin: 20px auto;
+        }
+
         span {
+
+          &.old-price {
+
+            @include mq(xs) {
+              font-size: 24px;
+              line-height: 31px;
+            }
+          }
 
           &.new-price {
             color: $pink;
+
+            @include mq(xs) {
+              font-size: 48px;
+              line-height: 62px;
+            }
           }
         }
       }
@@ -67,6 +132,15 @@
           margin-left: 465px;
         }
 
+        @include mq(md) {
+          margin-left: auto;
+        }
+
+        @include mq(s) {
+          text-align: left;
+          margin: 0 auto;
+        }
+
         li {
           margin-bottom: 20px;
 
@@ -75,6 +149,18 @@
             span {
               display: inline-block;
               width: 274px;
+
+              @include mq(md) {
+                width: 270px;
+              }
+
+              @include mq(s) {
+                width: 274px;
+              }
+
+              @include mq(xs) {
+                width: auto;
+              }
             }
           }
 
@@ -99,12 +185,38 @@
           left: 24px;
         }
 
+        @include mq(md) {
+          width: auto;
+          display: block;
+          left: 60px;
+        }
+
+        @include mq(s) {
+          position: static;
+          display: flex;
+          max-width: 520px;
+          margin: 21px auto 60px;
+        }
+
         a {
           margin-bottom: 10px;
           transition: all 0.5s ease-in-out;
 
           @include mq(lg) {
             width: 180px;
+          }
+
+          @include mq(md) {
+            width: 120px;
+          }
+
+          @include mq(s) {
+            width: 249px;
+          }
+
+          @include mq(xs) {
+            width: 47%;
+            min-width: 129px;
           }
 
           img {
@@ -123,6 +235,28 @@
             width: 180px;
             height: 120px;
             margin: 0 auto;
+          }
+
+          @include mq(md) {
+            width: 120px;
+            height: 80px;
+          }
+
+          @include mq(s) {
+            width: 249px;
+            height: 166px;
+          }
+
+          @include mq(xs) {
+            width: 55%;
+            min-width: 150px;
+            height: auto;
+            padding-bottom: 38%;
+          }
+
+          iframe {
+            top: 0;
+            left: 0;
           }
 
           .video-play {
@@ -161,13 +295,36 @@
           left: 489px;
         }
 
+        @include mq(md) {
+          left: 240px;
+        }
+
+        @include mq(s) {
+          position: static;
+          justify-content: center;
+        }
+
+        @include mq(xs) {
+          display: block;
+          margin: 0 auto;
+        }
+
         p {
           margin-top: 49px;
           margin-right: 20px;
+
+          @include mq(xs) {
+            margin: 0 0 11px 0;
+            text-align: center;
+          }
         }
 
         figure {
           display: flex;
+
+          @include mq(xs) {
+            justify-content: center;
+          }
 
           span {
             display: block;
@@ -224,6 +381,13 @@
         @include mq(lg) {
           bottom: 25px;
         }
+
+        @include mq(md) {
+          position: static;
+          text-align: center;
+          max-width: 100%;
+          margin-top: 35px;
+        }
       }
 
       .rating {
@@ -242,6 +406,10 @@
 
         @include mq(lg) {
           left: -5px;
+        }
+
+        @include mq(s) {
+          display: none;
         }
 
         &:before, &:after {
@@ -273,6 +441,15 @@
 
     form {
 
+      @include mq(md) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @include mq(s) {
+        align-items: flex-start;
+      }
+
       .form-group {
 
         @include mq(xl) {
@@ -283,12 +460,42 @@
           width: 230px;
         }
 
+        @include mq(s) {
+          width: 48%;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+        }
+
         &.tel {
           margin: 0 11px;
+
+          @include mq(md) {
+            margin: 0;
+          }
+
+          @include mq(xs) {
+            margin: 10px auto;
+          }
         }
 
         &.order {
           margin-left: auto;
+
+          @include mq(md) {
+            width: 320px;
+            margin: 20px auto 0;
+          }
+
+          @include mq(s) {
+            width: 48%;
+            margin: 20px 0 0;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+          }
         }
       }
 
@@ -301,6 +508,16 @@
 
         @include mq(lg) {
           width: 230px;
+        }
+
+        @include mq(s) {
+          width: 48%;
+          margin-top: 20px;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+          margin: 0;
         }
 
         .jq-selectbox {
@@ -340,14 +557,15 @@
           }
 
           &__dropdown {
+            box-sizing: border-box;
+            background: $white;
             border-radius: 5px;
-            border: none;
+            border: 2px solid $pale-green;
             box-shadow: none;
             font-family: $fb, sans-serif;
             font-size: 18px;
             line-height: 20px;
             color: $pale-green;
-
             overflow: hidden;
 
             ul {
@@ -398,12 +616,20 @@
           background: url("../img/catalog/vector-right.png") no-repeat center/cover;
           bottom: -405px;
           right: -348px;
+
+          @include mq(s) {
+            display: none;
+          }
         }
       }
     }
 
     &.man {
       margin: 155px auto 58px;
+
+      @include mq(md) {
+        margin: 60px auto 26px;
+      }
 
       section {
 
@@ -460,6 +686,13 @@
           }
         }
       }
+
+      .vector {
+
+        &.left {
+          top: calc(100% - 542px);
+        }
+      }
     }
   }
 
@@ -470,5 +703,9 @@
     position: absolute;
     top: 532px;
     left: 0;
+
+    @include mq(md) {
+      display: none;
+    }
   }
 }

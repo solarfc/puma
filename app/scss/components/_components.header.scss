@@ -22,6 +22,10 @@
     @include mq(md) {
       margin-bottom: 50px;
     }
+
+    @include mq(s) {
+      display: none;
+    }
   }
 
   &__content {
@@ -75,6 +79,19 @@
         left: 0;
       }
 
+      @include mq(s) {
+        width: 47%;
+        left: calc(50% - 48px);
+        transform: translateX(-50%);
+      }
+
+      @include mq(xs) {
+        width: 87%;
+        min-width: 265px;
+        max-width: 435px;
+        left: calc(50% - 63px);
+      }
+
       img {
 
         &.girl {
@@ -83,6 +100,10 @@
 
           @include mq(md) {
             margin: 0;
+          }
+
+          @include mq(s) {
+            width: 100%;
           }
         }
 
@@ -105,6 +126,18 @@
             top: 25px;
             right: -24%;
           }
+
+          @include mq(s) {
+            width: 104%;
+            right: -157px;
+            z-index: 11;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+            max-width: 330px;
+            top: 5.5%;
+          }
         }
       }
 
@@ -114,6 +147,11 @@
 
         @include mq(md) {
           right: 296px;
+        }
+
+        @include mq(s) {
+          bottom: 83px;
+          right: -52px;
         }
       }
 
@@ -160,6 +198,11 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include mq(md) {
+      width: 1920px;
+      left: -185px;
+    }
   }
 
   &:before, &:after {
@@ -169,17 +212,32 @@
     position: absolute;
     left: 0;
     z-index: 3;
+
+    @include mq(md) {
+      width: 1920px;
+      transform: translateX(-50%);
+    }
   }
 
   &:before {
     height: 126px;
     background: url("../img/header/wave-top.png") no-repeat center/cover;
     top: 0;
+
+    @include mq(md) {
+      top: -11px;
+      left: calc(50% - 10px);
+    }
   }
 
   &:after {
     height: 134px;
     background: url("../img/header/wave-bottom.png") no-repeat center/cover;
     bottom: 0;
+
+    @include mq(md) {
+      bottom: -36px;
+      left: 50%;
+    }
   }
 }

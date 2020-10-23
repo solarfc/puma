@@ -7,6 +7,10 @@
   padding: 95px 0 147px;
   position: relative;
 
+  @include mq(md) {
+    padding: 53px 0 40px;
+  }
+
   &__content {
     position: relative;
 
@@ -17,10 +21,18 @@
     p.big {
       color: $light-gray;
       max-width: 560px;
+
+      @include mq(md) {
+        max-width: 100%;
+      }
     }
 
     >p.big {
       margin: 10px 0 71px;
+
+      @include mq(md) {
+        margin: 5px 0 44px;
+      }
     }
 
     &-block {
@@ -28,6 +40,10 @@
 
       @include mq(xl) {
         margin-left: 25px;
+      }
+
+      @include mq(s) {
+        margin-left: 0;
       }
 
       figure {
@@ -54,6 +70,10 @@
 
         &:nth-child(2) {
           margin: 44px auto;
+
+          @include mq(md) {
+            margin: 23px auto;
+          }
         }
       }
     }
@@ -72,6 +92,19 @@
         width: 400px;
         top: 30px;
         right: 0;
+      }
+
+      @include mq(md) {
+        width: 314px;
+        margin-top: 16px;
+        position: relative;
+        top: 0;
+        left: calc(50% - 30px);
+        transform: translateX(-50%);
+      }
+
+      @include mq(xs) {
+        left: calc(50% - 20px);
       }
 
       img {
@@ -96,6 +129,13 @@
           height: 393px;
           top: 50px;
           right: -70px;
+        }
+
+        @include mq(md) {
+          width: 315px;
+          height: 308px;
+          top: 53px;
+          right: -67px;
         }
       }
     }
@@ -124,7 +164,20 @@
     height: 1080px;
     background: url("../img/advantages/snowdrift.png") no-repeat center/cover;
     position: absolute;
-    top: -65px;
+    bottom: -256px;
     left: 0;
+
+    @include mq(md) {
+      width: 979px;
+      height: 550px;
+      bottom: -78px;
+    }
+
+    @include mq(s) {
+      width: 800px;
+      height: 450px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

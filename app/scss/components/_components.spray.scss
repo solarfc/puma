@@ -6,6 +6,10 @@
   padding-top: 86px;
   position: relative;
 
+  @include mq(md) {
+    padding-top: 41px;
+  }
+
   .container {
     position: relative;
     z-index: 9;
@@ -16,8 +20,24 @@
     padding-left: 270px;
     margin-bottom: 19px;
 
+    @include mq(md) {
+      padding-left: 113px;
+    }
+
+    @include mq(s) {
+      margin-bottom: 29px;
+    }
+
+    @include mq(xs) {
+      padding-left: 0;
+    }
+
     h3 {
       position: relative;
+
+      @include mq(xs) {
+        margin-left: 111px;
+      }
 
       &:before {
         content: "";
@@ -28,11 +48,23 @@
         position: absolute;
         top: -27px;
         left: -270px;
+
+        @include mq(md) {
+          width: 113px;
+          height: 218px;
+          top: -34px;
+          left: -121px;
+        }
       }
     }
 
     .price {
       margin: 3px auto 4px;
+
+      @include mq(xs) {
+        margin: 0 0 33px 111px;
+        //margin: 5px 0 0 111px;
+      }
 
       span {
         text-transform: uppercase;
@@ -57,6 +89,11 @@
       &.small.uppercase {
         color: $white;
         max-width: 324px;
+
+        @include mq(xs) {
+          max-width: 100%;
+          margin: 6px 0 24px 111px;
+        }
       }
 
       &.big {
@@ -79,13 +116,46 @@
       padding-left: 180px;
     }
 
+    @include mq(md) {
+      padding-left: 0;
+    }
+
+    @include mq(s) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
     .form-group {
+      width: 48%;
+
+      @include mq(xs) {
+        width: 100%;
+      }
 
       &.tel {
         margin: 0 30px 0 20px;
 
         @include mq(lg) {
           margin: 0 10px;
+        }
+
+        @include mq(s) {
+          margin: 0;
+        }
+
+        @include mq(xs) {
+          margin: 10px auto 20px;
+        }
+      }
+
+      &.order {
+
+        @include mq(s) {
+          margin: 20px auto 0;
+        }
+
+        @include mq(xs) {
+          margin: 0 auto;
         }
       }
     }
@@ -98,5 +168,9 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include mq(md) {
+      display: none;
+    }
   }
 }
