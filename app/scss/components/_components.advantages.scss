@@ -91,7 +91,7 @@
       @include mq(lg) {
         width: 400px;
         top: 30px;
-        right: 0;
+        right: -10px;
       }
 
       @include mq(md) {

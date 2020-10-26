@@ -3,11 +3,37 @@
 var myWidth = window.innerWidth,
     myHeight = window.innerHeight;
 console.log("width ".concat(myWidth, " \n height ").concat(myHeight));
+document.querySelector('html').style.overflowY = 'hidden';
 
 window.onload = function () {
+  setTimeout(function () {
+    document.querySelector('html').style.overflowY = 'scroll';
+    document.querySelector('.loader').style.opacity = '0';
+    document.querySelector('.loader').style.zIndex = '-5';
+  }, 1500);
+  /*
+      animated block
+   */
+
+  var fade = [$('a.bucket'), $('.advantages__content h3'), $('.advantages__content p.big'), $('.advantages__content-block figure'), $('.gallery__content a'), $('.photo__content a')];
+
+  for (var _i = 0; _i < fade.length; _i++) {
+    fade[_i].waypoint(function (direction) {
+      if (direction === 'down') {
+        $(this.element).addClass('animated');
+        this.destroy();
+      }
+    }, {
+      offset: function offset() {
+        return this.context.innerHeight() * 0.82;
+      }
+    });
+  }
   /*
       increase date
    */
+
+
   var today = new Date(),
       tomorrow = new Date(),
       day,
@@ -20,8 +46,8 @@ window.onload = function () {
   month = tomorrow.getMonth() + 1 > 9 ? tomorrow.getMonth() + 1 : "0".concat(tomorrow.getMonth() + 1);
   year = tomorrow.getFullYear();
 
-  for (var _i = 0; _i < period.length; _i++) {
-    period[_i].innerHTML = "".concat(day, ".").concat(month, ".").concat(year.toString().slice(2));
+  for (var _i2 = 0; _i2 < period.length; _i2++) {
+    period[_i2].innerHTML = "".concat(day, ".").concat(month, ".").concat(year.toString().slice(2));
   }
 
   document.querySelector('.footer p.small.address output').innerHTML = year;
@@ -52,15 +78,15 @@ window.onload = function () {
       smallWomanBoot = document.querySelectorAll('.catalog__block.woman .catalog__block-img a img'),
       smallWomanLink = document.querySelectorAll('.catalog__block.woman .catalog__block-img a'),
       changeColor = function changeColor(color, img, photo, link) {
-    var _loop = function _loop(_i2) {
+    var _loop = function _loop(_i3) {
       var _loop2 = function _loop2(j) {
         color[j].addEventListener('click', function () {
           if (color[j].classList.contains('active')) {
-            color[_i2].classList.remove('active');
+            color[_i3].classList.remove('active');
 
             color[j].classList.add('active');
           } else {
-            color[_i2].classList.remove('active');
+            color[_i3].classList.remove('active');
 
             color[j].classList.add('active');
             var activeColor = color[j].classList.value;
@@ -69,9 +95,9 @@ window.onload = function () {
             var hide = function hide() {
               img.style.opacity = '0';
 
-              for (var _i3 = 0; _i3 < photo.length; _i3++) {
-                photo[_i3].style.opacity = '0';
-                link[_i3].style.opacity = '0';
+              for (var _i4 = 0; _i4 < photo.length; _i4++) {
+                photo[_i4].style.opacity = '0';
+                link[_i4].style.opacity = '0';
               }
             };
 
@@ -79,18 +105,18 @@ window.onload = function () {
               img.src = "img/catalog/".concat(activeModel, "/big.png");
               img.className = "big ".concat(activeColor);
 
-              for (var _i4 = 0; _i4 < photo.length; _i4++) {
-                photo[_i4].src = "img/catalog/".concat(activeModel, "/").concat(_i4 + 1, "s.jpg");
-                link[_i4].href = "img/catalog/".concat(activeModel, "/").concat(_i4 + 1, ".jpg");
+              for (var _i5 = 0; _i5 < photo.length; _i5++) {
+                photo[_i5].src = "img/catalog/".concat(activeModel, "/").concat(_i5 + 1, "s.jpg");
+                link[_i5].href = "img/catalog/".concat(activeModel, "/").concat(_i5 + 1, ".jpg");
               }
             };
 
             var show = function show() {
               img.style.opacity = '1';
 
-              for (var _i5 = 0; _i5 < photo.length; _i5++) {
-                photo[_i5].style.opacity = '1';
-                link[_i5].style.opacity = '1';
+              for (var _i6 = 0; _i6 < photo.length; _i6++) {
+                photo[_i6].style.opacity = '1';
+                link[_i6].style.opacity = '1';
               }
             };
 
@@ -106,8 +132,8 @@ window.onload = function () {
       }
     };
 
-    for (var _i2 = 0; _i2 < color.length; _i2++) {
-      _loop(_i2);
+    for (var _i3 = 0; _i3 < color.length; _i3++) {
+      _loop(_i3);
     }
   };
 
@@ -157,13 +183,43 @@ window.onload = function () {
       mql = window.matchMedia('screen and (min-width: 1200px)');
 
   mql.addListener(setupForWidth);
-  setupForWidth(mql); // /*
-  //     change href on mobile
-  //  */
-  //
-  // if(/iPhone|iPod|Android/i.test(navigator.userAgent)){
-  //     document.querySelector('a.grande').href = '#formgrande';
-  //     document.querySelector('a.lake').href = '#formlake';
-  //     document.querySelector('a.lou').href = '#formlou';
-  // }
+  setupForWidth(mql);
+
+  var toggleBucket = function toggleBucket() {
+    var bucket = document.querySelector('a.bucket'),
+        topOfWindow = window.pageYOffset + innerHeight,
+        catalogBlockTopPosition = document.querySelector('.catalog').offsetTop,
+        photoBlockTopPosition = document.querySelector('.photo').offsetTop,
+        footerLinkTopPosition = $('.footer__content .to-order').offset().top;
+
+    if (topOfWindow > catalogBlockTopPosition && topOfWindow < photoBlockTopPosition || topOfWindow > footerLinkTopPosition) {
+      bucket.style.opacity = '0';
+      bucket.style.zIndex = '-5';
+    } else {
+      bucket.style.opacity = '1';
+      bucket.style.zIndex = '99999';
+    }
+  };
+
+  if (/iPhone|iPod|iPad|Android/i.test(navigator.userAgent)) {
+    var href = $('#mobile-order').offset().top - innerHeight;
+    $('.to-order a, a.bucket').on('click', function () {
+      $('html, body').animate({
+        scrollTop: href
+      }, 800);
+    });
+    window.addEventListener('scroll', function () {
+      toggleBucket();
+    });
+    window.addEventListener('resize', function () {
+      toggleBucket();
+    });
+  } else {
+    var _href = $('#catalog').offset().top;
+    $('.to-order a, a.bucket').on('click', function () {
+      $('html, body').animate({
+        scrollTop: _href
+      }, 800);
+    });
+  }
 };

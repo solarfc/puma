@@ -160,6 +160,7 @@
 
               @include mq(xs) {
                 width: auto;
+                margin-right: 5px;
               }
             }
           }
@@ -632,6 +633,18 @@
       }
 
       section {
+
+        ul {
+          margin-bottom: 40px;
+
+          @include mq(md) {
+            margin-bottom: 80px;
+          }
+
+          @include mq(s) {
+            margin-bottom: 0;
+          }
+        }
 
         .catalog__block-img {
 

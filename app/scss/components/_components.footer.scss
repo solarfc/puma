@@ -13,7 +13,8 @@
 
   @include mq(s) {
     padding-bottom: 29px;
-    background: url("../img/footer/bg.png") no-repeat bottom center/auto, linear-gradient(180deg, #031821 0%, #271c47 100%);
+    background-position: bottom center;
+    background-size: auto;
   }
 
   .container {
@@ -281,19 +282,23 @@
     height: 371px;
     background: url("../img/footer/wave.png") no-repeat center/cover;
     position: absolute;
-    top: 483px;
+    bottom: 394px;
     left: 0;
 
     @include mq(md) {
       width: 1920px;
       height: 371px;
-      top: 379px;
+      bottom: 254px;
       left: 50%;
       transform: translateX(-50%);
     }
 
     @include mq(s) {
-      top: 425px;
+      bottom: 621px;
+    }
+
+    @include mq(xs) {
+      bottom: 561px;
     }
   }
 }

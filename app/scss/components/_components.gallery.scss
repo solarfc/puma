@@ -5,118 +5,90 @@
 .gallery {
   position: relative;
   padding-bottom: 104px;
-  //height: 1364px;
+
+  @include mq(s) {
+    padding-bottom: 67px;
+  }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    max-width: 1903px;
+    margin: 0 auto;
 
-    //a {
-    //
-    //  &:first-child {
-    //    grid-area: one;
-    //  }
-    //
-    //  &:nth-child(2) {
-    //    grid-area: two;
-    //    display: none;
-    //  }
-    //
-    //  &:nth-child(3) {
-    //    grid-area: three;
-    //    display: none;
-    //  }
-    //
-    //  &:nth-child(5) {
-    //    grid-area: five;
-    //  }
-    //
-    //  &:nth-child(6) {
-    //    grid-area: six;
-    //  }
-    //
-    //  &:nth-child(7) {
-    //    grid-area: seven;
-    //  }
-    //
-    //  &:nth-child(8) {
-    //    grid-area: eigth;
-    //  }
-    //}
-    //
-    //figure.clip {
-    //  grid-area: four;
-    //  display: none;
-    //}
-    //grid-template: "one one two two" auto;
-    //
-    //>a {
-    //  grid-area: one;
-    //}
-    //
-    //&-block {
-    //  grid-area: two;
-    //}
-  }
-  //&__content {
-  //  display: grid;
-  //  grid-template: "one two three" auto
-  //  "one four four" auto
-  //  "one five five" auto;
-  //
-  //  a {
-  //
-  //    &:first-child {
-  //      grid-area: one;
-  //    }
-  //
-  //    &:nth-child(2) {
-  //      grid-area: two;
-  //    }
-  //
-  //    &:nth-child(3) {
-  //      grid-area: three;
-  //    }
-  //  }
-  //
-  //  figure.clip {
-  //    grid-area: four;
-  //  }
-  //
-  //  figure.photo {
-  //    grid-area: five;
-  //    display: flex;
-  //
-  //    a {
-  //
-  //      &:first-child {
-  //        grid-area: one;
-  //      }
-  //
-  //      &:nth-child(2) {
-  //        grid-area: two;
-  //      }
-  //
-  //      &:nth-child(3) {
-  //        grid-area: three;
-  //      }
-  //
-  //      &:last-child {
-  //        grid-area: four;
-  //      }
-  //    }
-  //  }
-  //
-  //}
+    @include mq(xs) {
+      display: block;
+    }
 
-  &:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1080px;
-    background: url("../img/gallery/snowdrift.png") no-repeat center/cover;
-    position: absolute;
-    bottom: -746px;
-    left: 0;
+    img {
+
+      @include mq(xxl) {
+        width: 100%;
+      }
+    }
+
+    a {
+      position: relative;
+      z-index: 9;
+    }
+
+    >a {
+      width: 32.3%;
+
+      @include mq(xs) {
+        width: 100%;
+      }
+    }
+
+    &-block {
+      width: 67.7%;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include mq(xs) {
+        width: 100%;
+      }
+
+      a {
+        &:first-of-type {
+          width: 52.23%;
+        }
+
+        &:nth-of-type(2) {
+          width: 47.77%;
+        }
+
+        &:nth-of-type(3), &:nth-of-type(4) {
+          width: 26.15%;
+        }
+
+        &:nth-of-type(5) {
+          width: 25.3%;
+        }
+
+        &:last-of-type {
+          width: 22.4%;
+        }
+      }
+
+      figure.clip {
+        width: 100%;
+        padding-bottom: 23.287%;
+
+        @include mq(xxl) {
+          padding-bottom: 23%;
+        }
+
+        img {
+          filter: none;
+        }
+
+        &:hover {
+
+          img {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
   }
 }
